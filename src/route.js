@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const apiToken = process.env.API_TOKEN;
 
 //key api 
 const apiKey = require('.././middleware/ApikeyAuth')
