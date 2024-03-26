@@ -2,12 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+//key api 
+const apiKey = require('.././middleware/ApikeyAuth')
+
 const {getAllBatik,getBatikById, addBatik, addDeskripsi, deleteBatik, updateBatik, updateDeskripsi} = require('./models/batikModels')
 // Middleware untuk parsing JSON
 app.use(express.json());
 // Middleware untuk parsing form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
+app.use(apiKey);
 // Routes Batik
 app.get('/Batik', getAllBatik)
 // Get Batik by id
