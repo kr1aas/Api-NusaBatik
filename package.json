@@ -4,7 +4,7 @@
   "description": "",
   "main": "route.js",
   "scripts": {
-    "api-service": "nodemon ./src/route.js",
+    "api-service": "node ./src/route.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.1",
+    "express": "^4.19.2",
     "mysql": "^2.18.1",
     "nodemon": "^3.1.0"
   }
