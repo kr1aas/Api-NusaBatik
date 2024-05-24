@@ -54,9 +54,9 @@ function addBatik(req, res) {
 }
 
 function addDeskripsi(req, res) {
-    const { makna_batik, sejarah, jenis_batik, penggunaan } = req.body;
-    const sql = `INSERT INTO tb_deskripsi (makna_batik, sejarah, jenis_batik, penggunaan) VALUES (?, ?, ?, ?)`;
-    db.query(sql, [makna_batik, sejarah, jenis_batik, penggunaan ], (error, result) => {
+    const { makna_batik, sejarah, jenis_batik, penggunaan, id_deskripsi } = req.body;
+    const sql = `INSERT INTO tb_deskripsi (makna_batik, sejarah,id_deskripsi, jenis_batik, penggunaan) VALUES (?, ?, ?, ?, ?)`;
+    db.query(sql, [makna_batik, sejarah, jenis_batik, penggunaan, id_deskripsi ], (error, result) => {
         if (error) {
             return res.status(500).json({ error: "Server Error!" });
         }
